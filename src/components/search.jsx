@@ -15,7 +15,7 @@ function Search({ cb = Function.prototype }) {
 
     return (
         <div className="row">
-            <div className="input-field col s12">
+            <div className="input-field col s12 search-style">
                 <input
                     type="search"
                     id="search-field"
@@ -25,11 +25,12 @@ function Search({ cb = Function.prototype }) {
                     value={value}
                 />
                 <button
-                    className="btn"
-                    style={{ position: "absolute", top: "0", right: "0" }}
+                    className="btn btn-style"
+                    // position absolute
+                    style={{top: "0", right: "0" }}
                     onClick={handleSubmit}
                 >
-                    Найти
+                    Search
                 </button>
             </div>
         </div>

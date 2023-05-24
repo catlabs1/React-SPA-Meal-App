@@ -6,7 +6,7 @@ function Header() {
             <div className="container">
                 <div className="nav-wrapper">
                     <Link to="/" className="brand-logo">
-                        SPA App
+                        Meals
                     </Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li>

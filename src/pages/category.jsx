@@ -33,8 +33,8 @@ function Category() {
 
     return (
         <>
-            <button className="btn" onClick={goBack}>
-                &larr; Назад
+            <button className="btn btn-back" onClick={goBack}>
+                &larr; Go Back
             </button>
             <Search cb={handleSearch} />
             {!meals.length ? <Preloader /> : <MealList meals={filteredCatalog} />}

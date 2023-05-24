@@ -13,8 +13,8 @@ function CategoryItem(props) {
                 <p>{strCategoryDescription.slice(0,60)}...</p>
             </div>
             <div className="card-action">
-                <Link to={`/category/${strCategory}`} className="btn">
-                    Посмотреть категорию
+                <Link to={`/category/${strCategory}`} className="btn btn-choose">
+                    Watch Category
                 </Link>
             </div>
         </div>

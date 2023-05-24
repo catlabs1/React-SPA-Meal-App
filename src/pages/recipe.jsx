@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getMealById } from "../api";
@@ -14,6 +15,13 @@ function Recipe() {
     }, [id]);
     return (
         <>
+            <button className="btn btn-back" onClick={goBack}>
+                &larr; Go Back
+            </button>
+            <a href="">Overall information</a>
+            <a href="">Instructions</a>
+            <Link to="/#ingredients" target="_self">Ingredients</Link>
+            <a href="">Video Recipe</a>
             {!recipe.idMeal ? (
                 <Preloader />
             ) : (
@@ -23,8 +31,8 @@ function Recipe() {
                     <h6>Category: {recipe.strCategory}</h6>
                     {recipe.strArea ? <h6>Area: {recipe.strArea}</h6> : null}
                     <p>{recipe.strInstructions}</p>
-                    
-                    <table className="centered">
+                    <a name="ingredients"></a>
+                    <table className="centered" >
                         <thead>
                             <tr>
                                 <th>Ингредиенты</th>
@@ -37,7 +45,15 @@ function Recipe() {
                                     return (
                                         <tr key={key}>
                                             <td>{recipe[key]}</td>
-                                            <td>{recipe[`strMeasure${key.slice(13)}`]}</td>
+                                            <td>
+                                                {
+                                                    recipe[
+                                                        `strMeasure${key.slice(
+                                                            13
+                                                        )}`
+                                                    ]
+                                                }
+                                            </td>
                                         </tr>
                                     );
                                 }
@@ -49,7 +65,7 @@ function Recipe() {
                     {recipe.strYoutube ? (
                         <div className="row">
                             <h5 style={{ margin: "2rem 0 1.5rem" }}>
-                                Видео-рецепт
+                                Video recipe
                             </h5>
                             <iframe
                                 title={id}
@@ -62,7 +78,7 @@ function Recipe() {
                     ) : null}
                 </div>
             )}
-            <button className="btn" onClick={goBack}>
+            <button className="btn btn-back" onClick={goBack}>
                 &larr; Назад
             </button>
         </>
