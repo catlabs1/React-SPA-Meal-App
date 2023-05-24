@@ -21,6 +21,15 @@ code {
 .card {
     display: flex;
     flex-direction: column;
+    border-top-left-radius: 50px !important;
+    border-top-right-radius: 50px !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+.meal-card-image {
+    border-top-left-radius: 50px !important;
+    border-top-right-radius: 50px !important;
 }
 
 .card-content {

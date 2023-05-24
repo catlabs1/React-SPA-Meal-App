@@ -5,8 +5,8 @@ function CategoryItem(props) {
     
     return (
         <div className="card">
-            <div className="card-image">
-                <img src={strCategoryThumb} alt={strCategoryDescription} />
+            <div className="card-image ">
+                <img className="meal-card-image" src={strCategoryThumb} alt={strCategoryDescription} />
             </div>
             <div className="card-content">
                 <span className="card-title">{strCategory}</span>

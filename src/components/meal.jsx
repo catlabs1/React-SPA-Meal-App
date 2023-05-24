@@ -6,7 +6,7 @@ function Meal(props) {
     return (
         <div className="card">
             <div className="card-image">
-                <img src={strMealThumb} alt={strMeal} />
+                <img className="meal-card-image" src={strMealThumb} alt={strMeal} />
             </div>
             <div className="card-content">
                 <span className="card-title">{strMeal}</span>
