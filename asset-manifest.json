@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/React-SPA-Meal-App/static/css/main.46fb9661.css",
-    "main.js": "/React-SPA-Meal-App/static/js/main.1ae83f23.js",
+    "main.css": "/React-SPA-Meal-App/static/css/main.c1f6864b.css",
+    "main.js": "/React-SPA-Meal-App/static/js/main.15cf1ee5.js",
     "index.html": "/React-SPA-Meal-App/index.html",
-    "main.46fb9661.css.map": "/React-SPA-Meal-App/static/css/main.46fb9661.css.map",
-    "main.1ae83f23.js.map": "/React-SPA-Meal-App/static/js/main.1ae83f23.js.map"
+    "main.c1f6864b.css.map": "/React-SPA-Meal-App/static/css/main.c1f6864b.css.map",
+    "main.15cf1ee5.js.map": "/React-SPA-Meal-App/static/js/main.15cf1ee5.js.map"
   },
   "entrypoints": [
-    "static/css/main.46fb9661.css",
-    "static/js/main.1ae83f23.js"
+    "static/css/main.c1f6864b.css",
+    "static/js/main.15cf1ee5.js"
   ]
 }
