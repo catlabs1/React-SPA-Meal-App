@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getMealById } from "../api";
 import { Preloader } from "../components/preloader";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Recipe() {
     const [recipe, setRecipe] = useState({});
@@ -15,24 +15,33 @@ function Recipe() {
     }, [id]);
     return (
         <>
-            <button className="btn btn-back" onClick={goBack}>
-                &larr; Go Back
-            </button>
-            <a href="">Overall information</a>
-            <a href="">Instructions</a>
-            <Link to="/#ingredients" target="_self">Ingredients</Link>
-            <a href="">Video Recipe</a>
+            
             {!recipe.idMeal ? (
                 <Preloader />
             ) : (
-                <div className="recipe">
-                    <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-                    <h1>{recipe.strMeal}</h1>
-                    <h6>Category: {recipe.strCategory}</h6>
-                    {recipe.strArea ? <h6>Area: {recipe.strArea}</h6> : null}
+
+                <div className="recipe" id="start"> 
+                <button className="btn btn-back" onClick={goBack} id="top">
+                &larr; Go Back
+            </button>
+                    <div className="recipe-navigate">
+                        <AnchorLink href='#start'>General information</AnchorLink>
+                        <AnchorLink href='#instructions'>Instructions</AnchorLink>
+                        <AnchorLink href='#ingredients'>Ingredients</AnchorLink>
+                        <AnchorLink href='#video-recipe'>Video Recipe</AnchorLink>
+                    </div>
+                    <div className="recipe-1">
+                        <h1 className="recipe-title">{recipe.strMeal}</h1>
+                        <div className="recipe-info">
+                            <h6>Category: {recipe.strCategory}</h6>&middot;
+                            {recipe.strArea ? <h6>Area: {recipe.strArea}</h6> : null}
+                        </div>
+                        <img className="recipe-img" src={recipe.strMealThumb} alt={recipe.strMeal} />
+                    </div>
+                    <h3 id="instructions">Instructions</h3>
                     <p>{recipe.strInstructions}</p>
-                    <a name="ingredients"></a>
-                    <table className="centered" >
+                    <h3 id="ingredients">Ingredients</h3>
+                    <table className="recipe-ingredients">
                         <thead>
                             <tr>
                                 <th>Ингредиенты</th>
@@ -63,10 +72,11 @@ function Recipe() {
                     </table>
 
                     {recipe.strYoutube ? (
-                        <div className="row">
-                            <h5 style={{ margin: "2rem 0 1.5rem" }}>
+                        // внизу был класс row
+                        <div className="recipe-video" id="video-recipe">
+                            <h3>
                                 Video recipe
-                            </h5>
+                            </h3>
                             <iframe
                                 title={id}
                                 src={`https://www.youtube.com/embed/${recipe.strYoutube.slice(
@@ -78,9 +88,11 @@ function Recipe() {
                     ) : null}
                 </div>
             )}
-            <button className="btn btn-back" onClick={goBack}>
-                &larr; Назад
-            </button>
+            <AnchorLink href='#top'>
+                <button className="btn btn-back">
+                    &uarr; Go to top
+                </button>
+            </AnchorLink>
         </>
     );
 }

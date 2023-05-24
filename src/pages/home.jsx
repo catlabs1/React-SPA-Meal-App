@@ -25,11 +25,14 @@ function Home() {
 
     return (
         <>
-            <Search cb={handleSearch} />
+            
             {!catalog.length ? (
                 <Preloader />
             ) : (
-                <CategoryList catalog={filteredCatalog} />
+                <div>
+                    <Search cb={handleSearch} />
+                    <CategoryList catalog={filteredCatalog} />
+                </div>
             )}
         </>
     );

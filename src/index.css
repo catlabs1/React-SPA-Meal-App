@@ -1,38 +1,201 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
-
 .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
+    gap: 1rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-content {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
-img, iframe {
-  max-width: 100%;
+img,
+iframe {
+    max-width: 100%;
 }
 
 iframe {
-  width: 600px;
-  height: 350px;
+    width: 600px;
+    height: 350px;
+}
+
+.search-style {
+    display: flex;
+    align-items: center;
+    background-color: rgb(224, 224, 255);
+    padding: 0 !important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: 1.5rem auto 0.5rem auto;
+}
+
+input[type="search"]:active {
+    background: transparent !important;
+}
+
+input[type="search"] {
+    background-color: rgb(224, 224, 255) !important;
+    color: #262626 !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
+    border: none;
+    border-bottom: none !important;
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+    padding-left: 1rem !important;
+}
+
+input {
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
+.btn-style {
+    text-transform: none;
+    font-size: 16px;
+    margin-right: 0.75rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #82b1ff;
+}
+
+.btn-style:hover, .btn-style:focus {
+    background-color: #5c96f3 !important;
+}
+
+.btn-choose {
+    width: 100%;
+    text-transform: none !important;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #82b1ff;
+}
+
+.btn-choose:hover, .btn-choose:focus {
+    background-color: #5c96f3;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: #5596ff;
+    text-transform: none;
+    box-shadow: none;
+    padding-left: 0 !important;
+    margin: 1rem auto 0.5rem auto;
+    font-size: 16px;
+    grid-column-start: 2;
+}
+
+.btn-back:hover, .btn-back:focus {
+    background-color: transparent !important;
+    color: #275eb8 !important;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.recipe-1 {
+    display: grid;
+    grid-template-columns: 150px auto;
+    gap: 0.75rem;
+}
+
+.recipe {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+h3 {
+  grid-column-start: 2;
+}
+
+.recipe-navigate {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.recipe-title {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.recipe-info {
+    grid-row-start: 2;
+    grid-column: 1 / span 3;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-img {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    width: 100%;
+}
+
+
+.recipe-ingredients, .recipe-video {
+  grid-column-start: 2;
+}
+
+.progress {
+  background-color: #acbaec !important;
+  padding: 2px !important;
+}
+
+.indeterminate {
+  background-color: #5683cf !important;
+}
+
+.about-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+}
+
+.about-center h1 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
 }
